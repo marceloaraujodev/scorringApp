@@ -15,18 +15,8 @@ body{
 }
 .grid-container {
   display: grid;
-  grid-template-columns:repeat(2, 200px [col-start]) ; 
+  grid-template-columns:repeat(2, 1fr) ; 
 }
-/* .display{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: none;
-} */
-/* .gridItem{
-
-} */
 .grid-item{
   background-color: blue;
   color: white;
@@ -35,6 +25,7 @@ body{
 .left-display{
 margin-right: 10px;
 }
+
 .displayNumb{
   width: 100%;
   margin-bottom: 5px;
@@ -45,25 +36,26 @@ margin-right: 10px;
   border-radius: 5px;
 }
 .displayTotal{
-  /* width: 450px; */
   margin-bottom: 5px;
   font-size: 3rem;
   background-color: aliceblue;
   text-align: center;
-  
-  /* padding: 70px 0;   */
   border-radius: 5px;
-  height: 232px;
+}
+.grid-jersey{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .colorDisplay{
-  font-size: 1.3rem;
+  margin-top: 10px;
+  font-size: 1.1rem;
   font-weight: bold;
   text-align: center;
 }
 .waveScore{
   font-size: 1rem;
-  padding: 8px;
-  text-align: left;
+  padding: 5px;
+  text-align: center;
 }
 .score{
   font-weight: bold;

@@ -3,7 +3,8 @@ const scoreInput = document.querySelector('input')
 const display = document.querySelector('.displayNumb')
 const lycra = document.querySelectorAll('.lycra button')
 const displayTotalEl = document.querySelector('.displayTotal')
-// console.log(lycra)
+const scoreDisplayEl = document.querySelector('.whiteDis')
+// console.log(scoreDisplayEl)
 
 let surfer;
 let waveNum = 0;
@@ -44,7 +45,21 @@ confirmScore.addEventListener('click', ()=>{
 // put the jersey waves into a array and count it from there
 const wavesArr = [];
 
+// function waveToBeDisplayed(){
+//  for (const [red, white, yellow, blue] of scoreDisplay){
+//   console.log(red)
+//  }
+// }
+// console.log(scoreDisplayEl)
+//  for (const colors of scoreDisplayEl){
+//   const [red, white, yellow, blue] = colors;
+  
+//  }
+
+
+
 function submitScore(){
+  console.log(typeof surfer, surfer)
   let score = scoreInput.value
   if(score){
     console.log('submitting score!')
@@ -54,8 +69,25 @@ function submitScore(){
     const div = document.createElement('div')
     div.classList.add('waveScore')
     waveNum++
-    div.innerHTML = `#${waveNum} for <span class='surferJersey'>${surfer}</span> Score: <span class="score">${score}</span>`
-    displayTotalEl.appendChild(div)
+    div.innerHTML = `#${waveNum} Score: <br><span class="score">${score}</span>`
+    // abaixo colocar no surfista certo
+    scoreDisplayEl.appendChild(div)
+
+    if(surfer === 'Red'){
+      const redDis = document.querySelector('.redDis')
+    redDis.appendChild(div)//needs to change
+    }else if(surfer === 'White'){
+      const whiteDis = document.querySelector('.whiteDis')
+    whiteDis.appendChild(div)
+    }else if(surfer === 'Yellow'){
+      const yellowDis = document.querySelector('.yellowDis')
+    yellowDis.appendChild(div)
+    }else{
+      const blueDis = document.querySelector('.blueDis')
+    blueDis.appendChild(div)
+    }
+
+
     wavesArr.push(surfer)
     scoreInput.value = ''
     display.textContent = 0;
@@ -67,6 +99,7 @@ function submitScore(){
   }
   console.log(wavesArr)
 }
+//scores will be displayed at colorDisplay
 
 //// 1. go to wavesArr check if surfer is there if it is. how many times.
 //// 2. display the value of the how many times nex to the #
