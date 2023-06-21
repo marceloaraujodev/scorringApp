@@ -4,7 +4,7 @@ const display = document.querySelector('.displayNumb')
 const lycra = document.querySelectorAll('.lycra button')
 const displayTotalEl = document.querySelector('.displayTotal')
 const scoreDisplayEl = document.querySelector('.whiteDis')
-// console.log(scoreDisplayEl)
+// console.log(scoreInput)
 
 let surfer;
 let waveNum = 0;
@@ -25,12 +25,17 @@ let waveNum = 0;
 
 // display score in the display box
 scoreInput.addEventListener('keydown', (e)=>{
-  // console.log(typeof e.key)
-  let number = Number(e.key)
-  if(number){
-    display.textContent = number
+  // console.log(e.key)
+  // display.textContent = scoreInput.value;
+  if(e.key === 'Backspace'){
+    display.textContent = display.textContent.slice(0, -1)
   }else{
-    alert('enter number')
+    let input = e.key
+    if(!isNaN(input) || input === '.'){
+      display.textContent += input
+    }else{
+      alert('enter number')
+    }
   }
   
 })
@@ -59,9 +64,10 @@ const wavesArr = [];
 
 
 function submitScore(){
-  console.log(typeof surfer, surfer)
-  let score = scoreInput.value
-  if(score){
+  // console.log(typeof surfer, surfer)
+  let score = Number(scoreInput.value)
+  console.log(score > 0 && score <= 10 ? 'valid score' : 'not a valid score')
+  if(score > 0 && score <= 10){
     console.log('submitting score!')
     display.textContent = score
     console.log(`You entered ${score} for the Surfer in ${surfer}`)
@@ -87,15 +93,17 @@ function submitScore(){
     blueDis.appendChild(div)
     }
 
-
     wavesArr.push(surfer)
     scoreInput.value = ''
-    display.textContent = 0;
+    // display.textContent = 0;
     setTimeout(() => {
       clear()
-    }, 1500);
+      display.textContent = '';
+    }, 1200);
   }else{
-    alert('Please enter a score')
+    alert('Please enter a score from 0.1 through 10')
+    display.textContent = '';
+    scoreInput.value = ''
   }
   console.log(wavesArr)
 }
