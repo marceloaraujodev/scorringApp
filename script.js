@@ -99,7 +99,7 @@ function submitScore(){
   }
   console.log(wavesArr)
 }
-//scores will be displayed at colorDisplay
+//scores will be displayed at colorDisplay alkjd
 
 //// 1. go to wavesArr check if surfer is there if it is. how many times.
 //// 2. display the value of the how many times nex to the #
