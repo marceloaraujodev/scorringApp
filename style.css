@@ -2,11 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
   background-color: gray;
 }
+/* .title{
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  font-size: 3rem;
+} */
 .container{
   display: flex;
   height: 100vh;
@@ -44,12 +51,15 @@ margin-right: 10px;
   border-radius: 5px;
    min-height: 537.99px; /* min height of right panel */
 }
+.wavesTitle{
+  padding-top: 10px;
+}
 .grid-jersey{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .colorDisplay{
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 1.1rem;
   font-weight: bold;
   text-align: center;

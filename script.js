@@ -9,19 +9,6 @@ const scoreDisplayEl = document.querySelector('.whiteDis')
 let surfer;
 let waveNum = 0;
 
-//// listen for picked surffer
-// lycra.forEach((item)=>{
-//   item.addEventListener('click', ()=>{
-//     surfer = item.textContent
-//     console.log(`Surfer in ${surfer}`)
-
-//     //repeat the for each but just to remove the class! 
-//     lycra.forEach((otherItem)=>{
-//       otherItem.classList.remove('active')
-//     });
-//     item.classList.add('active')
-//   })
-// })
 
 // display score in the display box
 scoreInput.addEventListener('keydown', (e)=>{
@@ -40,27 +27,17 @@ scoreInput.addEventListener('keydown', (e)=>{
   
 })
 
+
 // after clicking checks if judge has picked surfers jersey
 confirmScore.addEventListener('click', ()=>{
   surfer ? submitScore() : alert('pick surfer')
 })
 
+
 // submits the score
 // find a way to count the waves for each surfer individually
 // put the jersey waves into a array and count it from there
 const wavesArr = [];
-
-// function waveToBeDisplayed(){
-//  for (const [red, white, yellow, blue] of scoreDisplay){
-//   console.log(red)
-//  }
-// }
-// console.log(scoreDisplayEl)
-//  for (const colors of scoreDisplayEl){
-//   const [red, white, yellow, blue] = colors;
-  
-//  }
-
 
 
 function submitScore(){
@@ -107,13 +84,7 @@ function submitScore(){
   }
   console.log(wavesArr)
 }
-//scores will be displayed at colorDisplay alkjd
 
-//// 1. go to wavesArr check if surfer is there if it is. how many times.
-//// 2. display the value of the how many times nex to the #
-// function countSurfersWave(array, surfer){
-
-// }
 
 function clear(){
   // display.textContent = 0
