@@ -14,11 +14,19 @@ body{
   color: white;
   font-size: 3rem;
 } */
+
 .container{
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  
+}
+.newHeat{
+  width: 150px;
+  margin: 10px 0;
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, .3)
 }
 .grid-container {
   display: grid;
@@ -42,14 +50,19 @@ margin-right: 10px;
   text-align: center;
   padding: 70px 0;  
   border-radius: 5px;
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, .3)
 }
-.displayTotal{
-  margin-bottom: 5px;
-  font-size: 3rem;
-  background-color: aliceblue;
+input{
+  width: 100%;
   text-align: center;
+  margin-bottom: 5px;
+  height: 60px;
   border-radius: 5px;
-   min-height: 537.99px; /* min height of right panel */
+  border: none;
+  font-weight: 600;
+}
+input:focus{
+  outline: none;
 }
 .wavesTitle{
   padding-top: 10px;
@@ -84,6 +97,8 @@ button{
   color: whitesmoke;
   font-weight: 600;
   cursor: pointer;
+  
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, .3)
 }
 .lycra{
   display: grid;
@@ -106,17 +121,14 @@ button{
 .blue{
   background-color: rgb(0, 72, 255);
 }
-input{
-  width: 100%;
-  text-align: center;
+.displayTotal{
   margin-bottom: 5px;
-  height: 60px;
+  font-size: 3rem;
+  background-color: aliceblue;
+  text-align: center;
   border-radius: 5px;
-  border: none;
-  font-weight: 600;
-}
-input:focus{
-  outline: none;
+  min-height: 537.99px; /* min height of right panel */
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, .3)
 }
 .active{
   border: 1.6px solid rgb(3, 3, 3);
