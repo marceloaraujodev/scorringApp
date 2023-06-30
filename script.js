@@ -63,7 +63,6 @@ const data = {
 // TODO 
 
 
-//  Create a new heat button. Clean all the scores.
 //  Find a way to count the heats for future reference.
 //  When a new heat start store the last scores either in a {} or []
 
