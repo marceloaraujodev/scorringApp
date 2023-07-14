@@ -31,6 +31,7 @@ body{
 .grid-container {
   display: grid;
   grid-template-columns:repeat(2, 1fr) ; 
+  grid-template-rows: 1fr 30px;
 }
 .grid-item{
   background-color: blue;
@@ -129,6 +130,9 @@ button{
   border-radius: 5px;
   min-height: 537.99px; /* min height of right panel */
   box-shadow: 3px 2px 8px rgba(0, 0, 0, .3)
+}
+.listwaves{
+
 }
 .active{
   border: 1.6px solid rgb(3, 3, 3);
